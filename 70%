@@ -1,0 +1,18 @@
+import cv2
+ 
+frame = cv2.imread('live_camera.png', cv2.IMREAD_UNCHANGED)
+ 
+print('Original Dimensions : ',frame.shape)
+ 
+scale_percent = 70 # percent of original size
+width = int(frame.shape[1] * scale_percent / 100)
+height = int(frame.shape[0] * scale_percent / 100)
+dim = (width, height)
+# resize image
+resized = cv2.resize(frame, dim, interpolation = cv2.INTER_AREA)
+ 
+print('Resized Dimensions : ',resized.shape)
+ 
+cv2.imshow("Resized image", resized)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
