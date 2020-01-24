@@ -30,7 +30,7 @@ def capture_vid():
     print('Frame width:', frame_width)
     print('Frame height:', frame_height)
     
-    video = cv2.VideoWriter('/home/jacobksu/Insync/jburne35@students.kennesaw.edu/OneDrive Biz/SPRING 2020/Machine Learning/Proj1/live_camera2.avi', cv2.VideoWriter_fourcc('M','J','P','G'),
+    video = cv2.VideoWriter('/home/jacobksu/Insync/jburne35@students.kennesaw.edu/OneDrive Biz/SPRING 2020/Machine Learning/Proj1/live_camera.avi', cv2.VideoWriter_fourcc('M','J','P','G'),
                             30, (frame_width, frame_height))
     start_time = time.time()
     while( int(time.time() - start_time) < capture_duration ):
@@ -65,7 +65,7 @@ def rescale_frame(frame, percent=70):
 
 def split_video_channels(mirror=False):
  
-    cap = cv2.VideoCapture('live_camera2.avi') 
+    cap = cv2.VideoCapture('live_camera.avi') 
 #    cv2.namedWindow('Webcam Life2Coding',cv2.WINDOW_NORMAL)
 #    zeros = None
     while True:
