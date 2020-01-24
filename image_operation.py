@@ -22,7 +22,7 @@ video = cv2.VideoWriter('/home/jacobksu/Insync/jburne35@students.kennesaw.edu/On
 frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 
 def capture_vid():
-    capture_duration = 4
+    capture_duration = 450  # seconds
     
     capture = cv2.VideoCapture(0)
     frame_width = int(capture.get(cv2.CAP_PROP_FRAME_WIDTH))
