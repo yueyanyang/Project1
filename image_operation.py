@@ -96,6 +96,7 @@ def split_video_channels(mirror=False):
             
 
             hist, bins = np.histogram(hsv,256, [0,255])
+            plt.subplot(2,1,1)
             plt.fill_between(range(256), hist, 0)
             plt.xlabel('S Histogram')
             plt.show()
